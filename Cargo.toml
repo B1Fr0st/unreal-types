@@ -4,9 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [features]
-default = ["ue5"]
+default = ["ue4"]
 ue4 = []
 ue5 = []
 egui = []
-
-[dependencies]

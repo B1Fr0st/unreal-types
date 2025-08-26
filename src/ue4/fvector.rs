@@ -1,4 +1,4 @@
-use crate::frotator::FRotator;
+use crate::FRotator;
 
 #[repr(C)]
 #[derive(Debug, Clone, Copy, Default)]
