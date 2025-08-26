@@ -48,9 +48,7 @@ impl FVector {
             z: self.z / mag,
         }
     }
-    // Add to_matrix
     pub fn to_matrix(&self) -> [[f64; 4]; 4] {
-        // Skidded.
         let origin = FVector {
             x: 0.0,
             y: 0.0,

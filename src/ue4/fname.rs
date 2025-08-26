@@ -3,4 +3,3 @@
 pub struct FName {
     pub comparison_index: u32,
 }
-

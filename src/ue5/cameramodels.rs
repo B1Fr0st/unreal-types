@@ -1,4 +1,4 @@
-use crate::{FVector,FRotator};
+use crate::{FRotator, FVector};
 #[derive(Debug, Clone, Copy, Default)]
 #[repr(C)]
 pub struct FMinimalViewInfo {

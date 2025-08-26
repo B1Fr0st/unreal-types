@@ -7,11 +7,14 @@ pub struct TArray<T> {
     _marker: std::marker::PhantomData<T>,
 }
 
-impl <T: 'static + Copy> TArray<T> {
+impl<T: 'static + Copy> TArray<T> {
     pub fn is_valid(&self) -> bool {
         self.data != 0 && self.count >= 0 && self.count <= self.max
     }
-    pub fn get(&self, index:i32) -> usize where T: 'static + Copy {
+    pub fn get(&self, index: i32) -> usize
+    where
+        T: 'static + Copy,
+    {
         self.data + (index as usize + size_of::<T>())
     }
     pub fn get_all(&self) -> impl Iterator<Item = usize> {

@@ -1,5 +1,3 @@
-use crate::FRotator;
-
 #[repr(C)]
 #[derive(Debug, Clone, Copy, Default)]
 pub struct FVector {
@@ -15,23 +13,6 @@ impl FVector {
             z: self.z - other.z,
         }
     }
-}
-
-pub fn get_axes(r:FRotator) -> [FVector;3]{
-    let mut r = r.clone();
-    let x:FVector = r.to_fvector().normalize();
-    r.yaw = 89.8;
-    let mut r2 = r;
-    r2.pitch = 0.0;
-    let mut y = r2.to_fvector().normalize();
-    y.z = 0.0;
-    r.yaw -= 89.8;
-    r.pitch += 89.8;
-    let z = r.to_fvector().normalize();
-    [x,y,z]
-    
-
-    
 }
 
 impl FVector {
@@ -67,9 +48,7 @@ impl FVector {
             z: self.z / mag,
         }
     }
-    // Add to_matrix
     pub fn to_matrix(&self) -> [[f32; 4]; 4] {
-        // Skidded.
         let origin = FVector {
             x: 0.0,
             y: 0.0,

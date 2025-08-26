@@ -1,4 +1,7 @@
-use std::{f32::consts::PI, ops::{Add, Mul, Sub}};
+use std::{
+    f32::consts::PI,
+    ops::{Add, Mul, Sub},
+};
 
 use crate::FVector;
 
@@ -15,7 +18,11 @@ impl FRotator {
         let fpitch = self.pitch * PI / 180.0;
         let cospitch = fpitch.cos();
 
-        FVector { x: fyaw.cos()*cospitch, y: fyaw.sin()*cospitch, z: fpitch.sin()}
+        FVector {
+            x: fyaw.cos() * cospitch,
+            y: fyaw.sin() * cospitch,
+            z: fpitch.sin(),
+        }
     }
 }
 
