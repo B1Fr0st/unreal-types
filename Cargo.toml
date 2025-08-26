@@ -1,0 +1,12 @@
+[package]
+name = "unreal-types"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = ["ue5"]
+ue4 = []
+ue5 = []
+egui = []
+
+[dependencies]
